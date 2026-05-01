@@ -1,0 +1,79 @@
+/* Custom styles for Solidwall Construction LTD */
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Visibility states for JS intersection observer */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered transition delays */
+.text-delay-100 { transition-delay: 0.1s; }
+.text-delay-200 { transition-delay: 0.2s; }
+.text-delay-300 { transition-delay: 0.3s; }
+
+/* Custom geometric borders */
+.geometric-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive fixes and custom tweaks */
+#mobile-menu {
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(100%);
+}
+
+#mobile-menu.active {
+    display: flex !important;
+    transform: translateX(0);
+}
+
+/* Navbar active state */
+nav.scrolled {
+    background-color: rgba(28, 28, 28, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Form focus tweaks */
+select option {
+    background: #1c1c1c;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #141414;
+}
+::-webkit-scrollbar-thumb {
+    background: #f5a623;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d48c1b;
+}
